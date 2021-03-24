@@ -8,4 +8,4 @@ const postSchema = mongoose.Schema({
 	anc_4_or_more : String
 })
 
-let Post = module.exports = mongoose.model('Post', postSchema);
+module.exports = mongoose.model('pw', postSchema);
