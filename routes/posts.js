@@ -12,8 +12,17 @@ router.get('/',async (req,res)=>{
 })
 
 
-router.get('/specific',(req,res)=>{
-    res.send('Specific')
+router.get('/:key/:value', async(req,res)=>{
+    try{    
+        let key = req.params.key;
+        let value = req.params.value;
+        let query = {};
+        query[key] = value;
+        const data = await Post.find(query);
+        res.json(data)
+    }catch(err){
+        res.json({message:err})
+    }
 })
 
 // router.post('/',(req,res)=>{

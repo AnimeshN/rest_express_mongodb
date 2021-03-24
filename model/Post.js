@@ -4,8 +4,8 @@ const postSchema = mongoose.Schema({
     year : String,
 	month : String,
 	state : String,
-	early_anc_register : String,
-	anc_4_or_more : String
+	early_anc_register : Number	,
+	anc_4_or_more : Number
 })
 
 module.exports = mongoose.model('pw', postSchema);
